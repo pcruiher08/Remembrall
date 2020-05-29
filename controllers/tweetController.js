@@ -8,15 +8,11 @@ exports.postTweet = async (req, res) => {
 		const tweet = new Tweet(req.body);
 		await tweet.save();  
 		res.redirect('back');
-
-
 	} catch (e) {
 		console.log(e);
 		res.redirect('/?msg=Failed to remember')
 	}
 }
-
-
 
 exports.patchTweet = async (req, res) => {
 	try {
@@ -24,20 +20,13 @@ exports.patchTweet = async (req, res) => {
 		var mensaje = "editado"
 		console.log(mensaje);
 		console.log(req.body)
-
 		const tweet = await Tweet.findOneAndUpdate({ _id: req.params.id },{tweet: mensaje});
-
-		
 		res.redirect('back')
 	} catch (e) {
 		console.log(e);
 		res.redirect('/?msg=Failed to patch')
 	}
-
-
 }
-
-
 
 const confirmedOwner = (tweet, user) => {
 	if(!tweet.author.equals(user._id)) {
@@ -73,5 +62,4 @@ exports.singleTweetPage = async (req, res) => {
 		console.log(err);
 		res.redirect('/?msg=No tweets found')
 	}
-
 }

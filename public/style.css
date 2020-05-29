@@ -63,7 +63,6 @@ textarea {
 
 .button {
 	background-color: white;
-	/* color: #65AFFF; */
 	color: var(--blue-violet);
 	padding-left: 10px;
 	padding-right: 10px;
