@@ -1,0 +1,12 @@
+extends layout
+include mixins/_tweetForm
+include mixins/_tweetCard
+block content 
+	.double_wrap
+		p Search results for:  
+			b #{data.query}
+		.feed_section.single_content
+			each tweet in data.results
+				+tweetCard(tweet)
+
+

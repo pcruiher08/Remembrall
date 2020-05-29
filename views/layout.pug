@@ -1,0 +1,29 @@
+include mixins/_loginForm
+include mixins/_accountMenu
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel='stylesheet' href='/style.css')
+		title Remembrall
+	body 
+		.header
+			.wrapper
+				#logo
+					h1.site_title
+						a(href='/') Remebrall
+				#navigation
+					if user 
+						+accountMenu()
+					else 
+						+loginForm()
+		.content_area
+				block content
+		//- .footer
+		//- 	p
+		//- 		small Remembrall 
+		//- 			a(href='https://testremebrall.herokuapp.com/' target='_blank') Remembrall
+			
+		

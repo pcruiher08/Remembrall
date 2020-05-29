@@ -1,0 +1,9 @@
+extends layout 
+include mixins/_tweetForm
+include mixins/_tweetCard
+block content
+	.single_wrap
+		if user 
+			+tweetForm()
+		each tweet in tweets
+			+tweetCard(tweet)
