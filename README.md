@@ -18,7 +18,7 @@ npm start dev
 ## Deployed version
 Please visit the following link for the deployed version of Remmembrall: 
 ```
-link
+https://remembrallapp.herokuapp.com/
 ```
 
 ## Endpoints
