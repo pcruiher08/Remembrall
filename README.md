@@ -28,16 +28,16 @@ link
 /api/tweets/:id/like      POST- Endpoint used to like a thought
 /register                 GET - Endpoint used to get the registration information
 /register                 POST- Endpoint used to register a user
-/login                    POST-
-/logout                   GET -
-/account                  GET -
-/account                  POST-
-/upload                   POST-
-/tweet                    POST-
-/edit/:id                 PATCH-
-/delete/:id               GET -
-/search                   GET -
-/:username                GET -
+/login                    POST- Endpoint used to login in Remembrall
+/logout                   GET - Endpoint used to logout from Remembrall
+/account                  GET - Endpoint used to validate if a user is logged in
+/account                  PATCH-Endpoint used to update a user's information
+/upload                   PATCH-Endpoint used to upload a picture
+/tweet                    POST- Endpoint used to post a thought
+/edit/:id                 PATCH-Endpoint used to update a thought
+/delete/:id               GET - Endpoint used to delete a thought
+/search                   GET - Endpoint used to search for thoughts given a word
+/:username                GET - Endpoint used to see a user's profile
 ```
 
 ## Dev
