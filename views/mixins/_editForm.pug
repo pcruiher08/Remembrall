@@ -1,0 +1,6 @@
+mixin editForm()
+	form.tweet_card(action='/edit/' method='POST')
+		.tweet_text
+			textarea(name='tweet' class='tweet_textarea' placeholder='New thought?..' maxlength="140" rows='3' required)
+			.tweet_button
+				input(type='submit' class='button tweet_button' value='Edit')
